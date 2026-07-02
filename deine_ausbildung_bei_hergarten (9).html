@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deine Ausbildung bei Hergarten – Starte Deine Zukunft mit uns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght=700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Segoe UI"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        spartan: ['"League Spartan"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f4f7fa',
+                            100: '#e1e9f2',
+                            200: '#c5d5e7',
+                            300: '#a2bddb',
+                            400: '#5c89b8',
+                            500: '#00598C', /* Exaktes Hergarten Blau */
+                            600: '#004a75',
+                            700: '#003a5c',
+                            800: '#002b44',
+                            900: '#001c2d',
+                        },
+                        steel: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            500: '#A9BDD7', /* Stahl-Grau-Blau */
+                            600: '#8fa8ca',
+                            700: '#7493bd',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Globale Zuweisung der Segoe UI für alle Fließtexte in exakt 15px */
+        body, p, ul, li, div.font-sans, label, select, input, textarea {
+            font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif !important;
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+        }
+        
+        /* Globale Zuweisung von League Spartan Bold für alle Überschriften und Buttons */
+        h1, h2, h3, h4, h5, h6, button, button *, a, a *, .font-spartan {
+            font-family: 'League Spartan', sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        /* Premium-Bokeh-Hintergrund angepasst an die neuen CI-Farbtöne */
+        .azubi-hero {
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(169, 189, 215, 0.4) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(0, 89, 140, 0.1) 0%, transparent 45%),
+                radial-gradient(#e1e9f2 1.5px, transparent 1.5px);
+            background-size: 100% 100%, 100% 100%, 32px 32px;
+        }
+        
+        /* Modern-Glow Effekte mit dem neuen Hergarten-Blau */
+        .glow-card {
+            box-shadow: 0 10px 30px -10px rgba(0, 89, 140, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 89, 140, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
+
+<main>
+    <section class="azubi-hero relative overflow-hidden pb-20 sm:pb-28 pt-10 sm:pt-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8 sm:space-y-10">
+            
+            <!-- Mittig platziertes und responsiv vergrößertes Hergarten Logo -->
+            <div class="flex justify-center mb-2 sm:mb-4 px-4">
+                <a href="#" class="w-full max-w-xs sm:max-w-md md:max-w-lg block group" aria-label="Hergarten Gruppe Home">
+                    <img id="hero-logo-img" src="Hergarten_Gruppe_Logo.png" alt="Hergarten Gruppe Logo" class="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200'; this.classList.add('rounded')">
+                </a>
+            </div>
+
+            <!-- Hauptüberschrift (Bold & Gradients in League Spartan Bold) -->
+            <div class="space-y-4">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                    Deine Ausbildung in der <br class="hidden sm:inline">
+                    <span class="bg-gradient-to-r from-brand-500 to-steel-700 bg-clip-text text-transparent">Hergarten Gruppe!</span>
+                </h1>
+                
+                <!-- Schneller Überblick über gesuchte Berufe (Mit robusten Inline-SVGs) -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 pt-4 max-w-4xl mx-auto">
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')">
+                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17h5m4 0h5"></path>
+                        </svg>
+                        Berufskraftfahrer
+                    </span>
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')">
+                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 8h6m-5 4h3m-7 8h12a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        Speditionskaufleute
+                    </span>
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')">
+                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        NFZ-Mechatroniker
+                    </span>
+                    <span class="px-4 py-2 bg-white/80 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700 shadow-sm flex items-center gap-1.5 hover:border-brand-300 transition-colors cursor-pointer" onclick="scrollToElement('jobs')">
+                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        Lagerlogistik-Profis
+                    </span>
+                </div>
+            </div>
+
+            <!-- Versprechen Text-Block mit Anpassungen laut Feedback -->
+            <div class="max-w-2xl mx-auto bg-white/40 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/60 shadow-lg glow-card">
+                <p class="text-slate-700 font-medium">
+                    Wir von der <strong class="font-bold text-slate-900">Unternehmensgruppe Hergarten</strong> bieten Dir einen sicheren Job, flache Hierarchien in einem sauberen und modernen Umfeld.
+                </p>
+                <p class="text-slate-700 font-medium mt-4">
+                    Na, neugierig? 😉
+                </p>
+            </div>
+
+            <!-- Standort-Visualisierung (Nur noch Ausbildungsort Neuss mit robustem SVG) -->
+            <div class="flex justify-center items-center text-2xl sm:text-3xl font-extrabold text-brand-700 pt-2">
+                <span class="flex items-center gap-2.5 drop-shadow-sm group cursor-pointer" onclick="scrollToElement('jobs')">
+                    <svg class="w-6 h-6 text-red-500 animate-bounce group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    Ausbildungsort Neuss
+                </span>
+            </div>
+
+            <!-- CTA Buttons (Mit robusten SVGs für externen Link) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-md sm:max-w-4xl mx-auto pt-6">
+                <a href="#bewerbung-sektion" class="w-full sm:w-80 text-center inline-flex items-center justify-center px-10 py-5 text-lg sm:text-xl lg:text-2xl font-extrabold text-white bg-brand-500 rounded-2xl shadow-2xl shadow-brand-500/20 hover:bg-brand-600 transition-all transform hover:-translate-y-1.5 whitespace-nowrap active:scale-95">
+                    Jetzt bewerben
+                </a>
+                <a href="https://www.stahlspedition.de" target="_blank" class="w-full sm:w-80 text-center inline-flex items-center justify-center px-10 py-5 text-lg sm:text-xl lg:text-2xl font-extrabold text-slate-800 bg-white border-2 border-slate-300 rounded-2xl hover:bg-slate-50 hover:border-brand-500 hover:text-brand-600 transition-all shadow-lg transform hover:-translate-y-1.5 whitespace-nowrap active:scale-95">
+                    Mehr erfahren! 
+                    <svg class="w-4 h-4 ml-2.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-b border-slate-100 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
+            
+            <!-- Bulletpoints & Headline Oben -->
+            <div class="space-y-6 text-center max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-700 tracking-tight leading-tight">
+                    In 5. Generation: Tradition trifft Zukunft.
+                </h2>
+                
+                <!-- Highlights laut Feedback -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-left">
+                    <div class="flex gap-3 items-start p-4 rounded-xl bg-slate-50 border border-slate-100/60 shadow-sm">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-sm">1</span>
+                        <p class="text-slate-700">
+                            <strong class="font-bold text-brand-700 font-spartan">Hauseigene Werkstätte:</strong><br>
+                            Zwei hochmoderne, eigene Werkstätten sichern die stetige Instandhaltung und Einsatzbereitschaft unserer LKWs.
+                        </p>
+                    </div>
+                    <div class="flex gap-3 items-start p-4 rounded-xl bg-slate-50 border border-slate-100/60 shadow-sm">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-sm">2</span>
+                        <p class="text-slate-700">
+                            <strong class="font-bold text-brand-700 font-spartan">Transformation von Diesel zu Strom:</strong><br>
+                            Wir treiben die Energiewende in der Logistik aktiv voran und setzen kontinuierlich auf nachhaltige E-Antriebe.
+                        </p>
+                    </div>
+                    <div class="flex gap-3 items-start p-4 rounded-xl bg-slate-50 border border-slate-100/60 shadow-sm">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-sm">3</span>
+                        <p class="text-slate-700">
+                            <strong class="font-bold text-brand-700 font-spartan">Digitale Abläufe & 5 Lager-Standorte:</strong><br>
+                            Voll digitalisierte Logistikprozesse und starke Präsenz mit fünf strategischen Lagerstandorten.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Expertise-Link Element (Mit robustem SVG Pfeil) -->
+                <div class="pt-4">
+                    <a href="https://www.stahlspedition.de" target="_blank" class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600 font-bold text-base sm:text-lg border-b-2 border-brand-300 hover:border-brand-500 pb-1 transition-all">
+                        Stahllogistik mit Geschichte - Logistik-Expertise seit über 120 Jahren. 
+                        <svg class="w-4 h-4 ml-1 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Zweispaltiges Bildraster in der Mitte -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <!-- Bild links: Stahlstückgut / Stahlrohre -->
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-100 group transition-all duration-300 hover:scale-[1.01]">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800" alt="Hergarten Stahl-Logistik Expertise" class="w-full h-56 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800'">
+                </div>
+                <!-- Bild rechts: Hergarten Blauer LKW / Flotte -->
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-100 group transition-all duration-300 hover:scale-[1.01]">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800" alt="Hergarten Blaue LKW-Flotte" class="w-full h-56 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200'">
+                </div>
+            </div>
+
+            <!-- Team & Marktführer Textblöcke unten (Mit robusten SVGs) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                <div class="space-y-3 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 transition-colors shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 leading-tight">Ein starkes Team, mit insgesamt über 300 Mitarbeitern</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Zuverlässiger Service für all unsere Gewerbekunden. Professionelle Instandhaltung von eigenen und Fremd-LKW sichert unsere exzellente Performance auf allen Wegen.
+                    </p>
+                </div>
+
+                <div class="space-y-3 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 transition-colors shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-steel-600 text-white flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17h5m4 0h5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 leading-tight">Marktführer unserer Branche, der Stahllogistik</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Jahrelange Erfahrung, umfassendes IT-Know-How und rund 180 eigene LKW zeichnen uns aus. Zwei moderne Werkstattstandorte in Köln und Neuss runden unser Profil perfekt ab.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="jobs" class="py-16 bg-slate-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs font-bold tracking-widest text-brand-500 uppercase">Deine Wahl</span>
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Unsere 4 Ausbildungsberufe</h2>
+                <p class="text-slate-600">Wir bilden Dich für das echte Leben aus. Klicke auf „Details anzeigen“, um Aufgaben und coole Vergünstigungen zu sehen.</p>
+                
+                <!-- Schnellbewerbungs- & WhatsApp-Buttons mit robusten SVGs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 max-w-xl mx-auto">
+                    <a href="#bewerbung-sektion" onclick="scrollToElement('bewerbung-sektion')" class="w-full sm:w-1/2 inline-flex items-center justify-center px-6 py-4 text-base sm:text-lg font-bold text-white bg-brand-500 rounded-xl shadow-lg hover:bg-brand-600 transition-all transform hover:-translate-y-0.5 active:scale-95 text-center whitespace-nowrap">
+                        Jetzt bewerben
+                    </a>
+                    <a href="https://wa.me/491737541325?text=Hallo%20Hergarten-Team%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Ausbildung%20bei%20Euch!" target="_blank" class="w-full sm:w-1/2 inline-flex items-center justify-center px-6 py-4 text-base sm:text-lg font-bold text-white bg-emerald-500 rounded-xl shadow-lg hover:bg-emerald-600 transition-all transform hover:-translate-y-0.5 active:scale-95 text-center whitespace-nowrap">
+                        <svg class="w-5 h-5 mr-2 fill-current inline-block" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.749 1.451 5.435.002 9.851-4.414 9.854-9.853.002-2.636-1.023-5.11-2.884-6.974C16.452 1.91 13.978.887 11.346.887c-5.438 0-9.856 4.415-9.858 9.856-.001 1.713.447 3.385 1.298 4.887l-.991 3.62 3.71-.973zm11.514-4.832c-.312-.156-1.848-.912-2.134-1.017-.287-.104-.496-.156-.705.157-.208.312-.807.156-.989-.156-.073-.125-.219-.156-.516-.312-1.258-.633-2.15-2.083-2.15-2.083-.245-.42-.015-.65.2-.857.194-.186.312-.36.417-.521.104-.156.156-.26.26-.417.104-.156.052-.312-.026-.469-.079-.156-.705-1.7-.964-2.324-.253-.61-.51-.527-.705-.537-.182-.01-.39-.01-.599-.01-.208 0-.547.078-.833.39-.286.313-1.094 1.069-1.094 2.606 0 1.538 1.12 3.023 1.276 3.231.156.208 2.203 3.364 5.336 4.717.745.322 1.327.514 1.782.658.749.238 1.431.205 1.969.124.6-.09 1.848-.756 2.108-1.45.26-.694.26-1.29.182-1.416-.078-.125-.286-.208-.598-.364z"/>
+                        </svg>
+                        WhatsApp schreiben
+                    </a>
+                </div>
+            </div>
+
+            <div id="jobs-container" class="space-y-6">
+                
+                <!-- AZUBI JOB 1: Berufskraftfahrer -->
+                <div id="card-fahrpersonal" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Fahrpersonal">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Neuss</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-emerald-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 014 0m-3 8a3 3 0 100-6 3 3 0 000 6zm2 2a6 6 0 016 6H3a6 6 0 016-6z"></path>
+                                    </svg>
+                                    Klasse C/CE ab 21 Jahren
+                                </span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    Start: 01.09.2026
+                                </span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zum Berufskraftfahrer (m/w/d)</h3>
+                            <p class="text-slate-500 leading-relaxed max-w-3xl">
+                                Ohne Fahrer läuft gar nichts – Du bringst die Waren in die Geschäfte und die Materialien zur Produktionsstätte. Bei uns kommst Du viel rum und übernachtest doch meistens zu Hause.
+                            </p>
+                            
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Action-Faktor</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[95%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Technik-Faktor</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[80%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job1', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap inline-flex items-center justify-center">
+                                <span class="btn-text">Details anzeigen</span>
+                                <svg class="w-3 h-3 ml-1 transition-transform duration-200 inline" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zum Berufskraftfahrer (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="details-job1" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                        </svg>
+                                        Was Dich erwartet:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Fahren und Tourenplanung</li>
+                                        <li>Ladungssicherung und Kontrolle der Papiere</li>
+                                        <li>Kundenkontakt</li>
+                                        <li>Fahrzeugwartung und -reparatur</li>
+                                        <li>Verantwortung für Fahrzeug, Ladung, Sicherheit und Pünktlichkeit</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                        Was wir erwarten:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li><strong>Technikbegeisterung:</strong> Fahrzeugtechnik fasziniert Dich und der Umgang mit Ölmessstab oder Schraubenschlüssel reizt Dich.</li>
+                                        <li><strong>Coolness:</strong> Du bleibst auch in stressigen Situationen ruhig und fährst unter Zeitdruck bei Eis und Schnee konzentriert.</li>
+                                        <li><strong>Räumliches Vorstellungsvermögen:</strong> Das brauchst Du, um einen LKW mit Anhänger rückwärts einzuparken.</li>
+                                        <li><strong>Verantwortungsbewusstsein:</strong> Das ist von Bedeutung für die Ladung, den Straßenverkehr und die pünktliche Anlieferung beim Kunden.</li>
+                                        <li><strong>Höflichkeit:</strong> Ein freundlicher Umgang mit Kunden und Kollegen ist Dir und uns sehr wichtig.</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm-8 4h16a1 1 0 011 1v3a1 1 0 01-1 1H3a1 1 0 01-1-1v-3a1 1 0 011-1zm2 5h12v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5z"></path>
+                                        </svg>
+                                        Deine Vorteile bei uns:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Schon mit 21 Jahren kannst Du den Führerschein Klasse C/CE erwerben</li>
+                                        <li>Anschließender Gabelstapler-, ADR-, Hallen- und Kranführerschein</li>
+                                        <li>Verschiedene Ausbildungsorte sind Dir sicher</li>
+                                        <li>Du übernachtest meistens zu Hause</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AZUBI JOB 2: Speditionskaufmann -->
+                <div id="card-disposition" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Disposition">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Neuss</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-50 text-blue-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                    Kaufmännische Steuerung
+                                </span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    Start: 01.09.2026
+                                </span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zum Kaufmann für Spedition und Logistikdienstleistung (m/w/d)</h3>
+                            <p class="text-slate-500 leading-relaxed max-w-3xl">
+                                Du organisierst den Versand, den Empfang, die Lagerung und den Umschlag verschiedenster Stahlprodukte. Hierbei wirkst Du bei der Ermittlung von Kosten und Erträgen sowie der kaufmännischen Steuerung mit.
+                            </p>
+                            
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Organisations-Power</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[95%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Team-Kommunikation</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[90%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job2', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap inline-flex items-center justify-center">
+                                <span class="btn-text">Details anzeigen</span>
+                                <svg class="w-3 h-3 ml-1 transition-transform duration-200 inline" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zum Kaufmann für Spedition und Logistikdienstleistung (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="details-job2" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                        </svg>
+                                        Was Dich erwartet:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Einblick in alle relevanten Fachbereiche eines anerkannten Full-Service-Partners im Bereich des Stahlstückguttransportes</li>
+                                        <li>Organisation von Versand, Empfang, Lagerung und Umschlag verschiedenster Stahlprodukte</li>
+                                        <li>Mitwirkung bei der Ermittlung von Kosten und Erträgen</li>
+                                        <li>Mitwirkung bei der kaufmännischen Steuerung</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                        Was wir erwarten:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Guten mittleren Bildungsabschluss oder Abitur (gerne auch Studienabbrecher/innen)</li>
+                                        <li>Kontaktfreude und gute Umgangsformen</li>
+                                        <li>Flexibel sein und gerne planen und organisieren</li>
+                                        <li>Auch bei Stress einen kühlen Kopf behalten</li>
+                                        <li>Unternehmerisch Denken und Handeln</li>
+                                        <li>Sorgfalt, Genauigkeit, Eigeninitiative und Entscheidungsfreude</li>
+                                        <li>Gute Kenntnisse in Geographie</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm-8 4h16a1 1 0 011 1v3a1 1 0 01-1 1H3a1 1 0 01-1-1v-3a1 1 0 011-1zm2 5h12v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5z"></path>
+                                        </svg>
+                                        Deine Vorteile bei uns:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Theoretisches Fachwissen gepaart mit fundierten Praxiskenntnissen</li>
+                                        <li>Arbeiten in einer der tragendsten Säulen unserer Unternehmensgruppe</li>
+                                        <li>Abwechslungsreiche Aufgaben rund um nationale & internationale Transporte</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AZUBI JOB 3: KFZ-Mechatroniker -->
+                <div id="card-werkstatt" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Werkstatt">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Neuss</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-50 text-amber-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-amber-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    Diagnosetechnik & Mechanik
+                                </span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    Start: 01.08.2027
+                                </span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zum Kfz-Mechatroniker für Nutzfahrzeugtechnik (m/w/d)</h3>
+                            <p class="text-slate-500 leading-relaxed max-w-3xl">
+                                Du erhältst eine praxisnahe Ausbildung in einem erfahrenen Werkstatt-Team und lernst alles rund um die Wartung und Instandhaltung moderner Nutzfahrzeuge. Dabei arbeitest Du mit modernster Diagnosetechnik und hilfst mit, dass unsere LKW-Flotte zuverlässig auf den Straßen bleibt.
+                            </p>
+                            
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Handwerk & Skill</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[95%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">High-Tech Diagnose</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[90%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job3', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap inline-flex items-center justify-center">
+                                <span class="btn-text">Details anzeigen</span>
+                                <svg class="w-3 h-3 ml-1 transition-transform duration-200 inline" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zum Kfz-Mechatroniker für Nutzfahrzeugtechnik (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="details-job3" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                        </svg>
+                                        Was Dich erwartet:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Lernen von Wartung, Instandhaltung und Vorbereitung moderner Nutzfahrzeuge für den sicheren Einsatz</li>
+                                        <li>Arbeiten mit modernster Diagnosetechnik</li>
+                                        <li>Fehlerfindung in komplexen elektronischen Systemen</li>
+                                        <li>Instandsetzung mechanischer Bauteile</li>
+                                        <li>Ein breites Aufgabenspektrum vom klassischen Sattelschlepper bis zum Hightech-LKW</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                        Was wir erwarten:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Mindestens einen guten Haupt- oder Realschulabschluss (gern auch technisch interessierte Quereinsteiger/innen)</li>
+                                        <li>Technisches Verständnis und handwerkliches Geschick</li>
+                                        <li>Sorgfalt, Zuverlässigkeit und Verantwortungsbewusstsein</li>
+                                        <li>Interesse an Fahrzeugen, Motoren und Mechanik</li>
+                                        <li>Ausgeprägter Teamgeist</li>
+                                        <li>Lust, tatkräftig mit anzupacken – auch wenn es mal dreckig wird</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm-8 4h16a1 1 0 011 1v3a1 1 0 01-1 1H3a1 1 0 01-1-1v-3a1 1 0 011-1zm2 5h12v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5z"></path>
+                                        </svg>
+                                        Deine Vorteile bei uns:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Eine praxisnahe Ausbildung in einem erfahrenen Werkstatt-Team</li>
+                                        <li>Arbeiten an hochmodernen und klassischen Fahrzeugen</li>
+                                        <li>Erfahrung mit den neuesten elektronischen Diagnosesystemen</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AZUBI JOB 4: Lagerlogistik -->
+                <div id="card-logistik" class="job-card bg-white hover:bg-slate-50/40 border border-slate-200 hover:border-brand-300 rounded-2xl p-6 sm:p-8 flex flex-col gap-4 transition-all duration-300 shadow-sm" data-dept="Logistik">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-50 text-brand-700">Neuss</span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-sky-50 text-sky-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-sky-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                    Optimierung logistischer Prozesse
+                                </span>
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700">
+                                    <svg class="w-3.5 h-3.5 mr-1 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    Start: 01.09.2027
+                                </span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-black text-slate-900">Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)</h3>
+                            <p class="text-slate-500 leading-relaxed max-w-3xl">
+                                Unsere Auszubildenden nehmen Güter an, kontrollieren diese und lagern sie sachgerecht. Du stellst Lieferungen und Tourenpläne zusammen, verlädst und versendest Güter.
+                            </p>
+                            
+                            <div class="grid grid-cols-3 gap-4 max-w-md pt-2">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Power & Fitness</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[90%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Orga-Skill</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-brand-500 h-full w-[85%]"></div></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Zukunftssicherheit</span>
+                                    <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[100%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-auto flex flex-row lg:flex-col gap-2 lg:items-end justify-end self-stretch lg:self-center">
+                            <button onclick="toggleJobDetails('details-job4', this)" class="flex-1 lg:flex-none px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap inline-flex items-center justify-center">
+                                <span class="btn-text">Details anzeigen</span>
+                                <svg class="w-3 h-3 ml-1 transition-transform duration-200 inline" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <button onclick="applyToJob('Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)')" class="flex-1 lg:flex-none px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs sm:text-sm transition-colors text-center whitespace-nowrap shadow-md">
+                                Jetzt bewerben
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="details-job4" class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 overflow-hidden">
+                        <div class="overflow-hidden">
+                            <div class="pt-6 border-t border-slate-100 mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                        </svg>
+                                        Was Dich erwartet:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Annahme und Kontrolle einlaufender Güter</li>
+                                        <li>Sachgerechte Einlagerung aller Produkte</li>
+                                        <li>Zusammenstellung von Lieferungen und Tourenplänen</li>
+                                        <li>Verladung und sicherer Versand von Gütern</li>
+                                        <li>Mitwirkung bei der Optimierung logistischer Prozesse</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                        </svg>
+                                        Was wir erwarten:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Einen guten Hauptschulabschluss oder Mittleren Bildungsabschluss</li>
+                                        <li>Gute Umgangsformen</li>
+                                        <li>Auch bei Stress einen kühlen Kopf behalten</li>
+                                        <li>Sorgfalt & Genauigkeit</li>
+                                        <li>Eigeninitiative und Entscheidungsfreude</li>
+                                    </ul>
+                                </div>
+                                <div class="space-y-2">
+                                    <h4 class="font-extrabold text-slate-800 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm-8 4h16a1 1 0 011 1v3a1 1 0 01-1 1H3a1 1 0 01-1-1v-3a1 1 0 011-1zm2 5h12v5a1 1 0 01-1 1H5a1 1 0 01-1-1v-5z"></path>
+                                        </svg>
+                                        Deine Vorteile bei uns:
+                                    </h4>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1.5 font-sans">
+                                        <li>Aktive Beteiligung an modernen logistischen Optimierungen</li>
+                                        <li>Vielseitige Aufgabengebiete vom Wareneingang bis zur Tourenplanung</li>
+                                        <li>Zukunftssicheres Umfeld im Bereich der Stahllogistik</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="no-jobs" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 p-8 mt-6">
+                <svg class="w-12 h-12 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5M5 19v-2a2 2 0 002-2h2m0 0h12a2 2 0 002-2v-4M9 15v-2a2 2 0 012-2h4a2 2 0 012 2v2m-6-2h4"></path>
+                </svg>
+                <h4 class="font-bold text-lg text-slate-800">Kein passender Ausbildungsplatz gefunden?</h4>
+                <p class="text-slate-500 text-sm mt-1 font-sans">Sende uns eine Initiativbewerbung oder mach erst mal ein Schnupperpraktikum bei uns!</p>
+                <button onclick="applyToJob('Initiativbewerbung / Schnupperpraktikum')" class="mt-4 inline-flex items-center justify-center px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-sm transition-colors shadow">
+                    Jetzt initiativ bewerben
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="bewerbung-sektion" class="py-16 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <!-- Hintergrund erstrahlt nun komplett in Hergarten Blau (#00598C) -->
+            <div class="bg-brand-500 rounded-3xl shadow-2xl overflow-hidden text-white relative border border-brand-400/40">
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/5 rounded-full blur-2xl"></div>
+                <div class="absolute -left-16 -top-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
+
+                <div class="p-8 sm:p-12 relative z-10">
+                    <div class="text-center max-w-2xl mx-auto space-y-4 mb-10">
+                        <span class="text-xs font-bold tracking-widest text-emerald-300 uppercase">⚡ Turbo-Expressbewerbung</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight transition-all duration-300 text-white" id="express-title-dynamic">
+                            Bewerben in nur 60 Sekunden!
+                        </h2>
+                        <p class="text-brand-100 font-sans">Kein Anschreiben? Kein Lebenslauf parat? Kein Stress! Fülle einfach das kurze Formular aus und wir melden uns bei Dir.</p>
+                    </div>
+
+                    <!-- Formular an den gewünschten Endpoint forminit.com -->
+                    <form id="express-form" onsubmit="handleFormSubmit(event)" class="space-y-6" enctype="multipart/form-data">
+                        <!-- Hidden Endpoint Input -->
+                        <input type="hidden" id="formEndpoint" value="https://forminit.com/f/8v0uhit2n7m">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="sm:col-span-2">
+                                <label for="form-position" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2">Deine Wunsch-Ausbildung *</label>
+                                <select id="form-position" name="ausbildung" required class="w-full px-4 py-3.5 bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/10 rounded-xl text-white font-medium focus:outline-none transition-all cursor-pointer font-sans" onchange="updateFormHeader(this.value)">
+                                    <option value="" disabled selected class="bg-brand-600">Bitte wähle Deine Wunsch-Stelle</option>
+                                    <option value="Ausbildung zum Berufskraftfahrer (m/w/d)" class="bg-brand-600">Ausbildung zum Berufskraftfahrer (m/w/d)</option>
+                                    <option value="Ausbildung zum Kaufmann für Spedition und Logistikdienstleistung (m/w/d)" class="bg-brand-600">Ausbildung zum Kaufmann für Spedition u. Logistik (m/w/d)</option>
+                                    <option value="Ausbildung zum Kfz-Mechatroniker für Nutzfahrzeugtechnik (m/w/d)" class="bg-brand-600">Ausbildung zum Kfz-Mechatroniker (m/w/d)</option>
+                                    <option value="Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)" class="bg-brand-600">Ausbildung zur Fachkraft für Lagerlogistik (m/w/d)</option>
+                                    <option value="Initiativbewerbung / Schnupperpraktikum" class="bg-brand-600">Schnupperpraktikum / Ferienjob / Initiativ</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="form-name" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2">Dein Name *</label>
+                                <input type="text" id="form-name" name="name" required placeholder="Vor- und Nachname" class="w-full px-4 py-3.5 bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/10 rounded-xl placeholder-white/55 text-white focus:outline-none transition-all font-sans">
+                            </div>
+
+                            <div>
+                                <label for="form-phone" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2">Deine Handynummer *</label>
+                                <input type="tel" id="form-phone" name="telefon" required placeholder="z. B. für WhatsApp Kontakt" class="w-full px-4 py-3.5 bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/10 rounded-xl placeholder-white/55 text-white focus:outline-none transition-all font-sans">
+                            </div>
+
+                            <div>
+                                <label for="form-email" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2">Deine E-Mail-Adresse *</label>
+                                <input type="email" id="form-email" name="email" required placeholder="Deine E-Mail" class="w-full px-4 py-3.5 bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/10 rounded-xl placeholder-white/55 text-white focus:outline-none transition-all font-sans">
+                            </div>
+
+                            <div>
+                                <label for="form-start" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2">Wann kannst Du starten? *</label>
+                                <input type="text" id="form-start" name="startdatum" required placeholder="z. B. ab sofort, August 2026..." class="w-full px-4 py-3.5 bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/10 rounded-xl placeholder-white/55 text-white focus:outline-none transition-all font-sans">
+                            </div>
+
+                            <!-- Medien Upload Feld -->
+                            <div class="sm:col-span-2">
+                                <label for="form-file" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2 font-spartan">Deine Dokumente oder Medien (Optional – z. B. Lebenslauf, Zeugnis oder ein kurzes Vorstellungsvideo)</label>
+                                <div class="relative border-2 border-dashed border-white/25 hover:border-white/50 rounded-xl p-6 transition-all text-center cursor-pointer group bg-white/5" id="upload-zone">
+                                    <input type="file" id="form-file" name="medien_upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept="image/*,video/*,application/pdf,.doc,.docx" onchange="handleFileChange(this)" multiple>
+                                    <div class="space-y-2 pointer-events-none">
+                                        <svg class="w-8 h-8 text-brand-200 group-hover:scale-110 transition-transform mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                        </svg>
+                                        <p class="text-sm text-white font-medium font-sans" id="upload-text">Dateien auswählen oder hierher ziehen</p>
+                                        <p class="text-[11px] text-brand-200 font-sans">Erlaubte Formate: PDF, Word, Bilder oder Video (maximal 10 MB insgesamt)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label for="form-msg" class="block text-xs font-bold uppercase tracking-wider text-brand-100 mb-2">Kurze Info zu Dir (Optional)</label>
+                                <textarea id="form-msg" name="nachricht" rows="3" placeholder="Z. B.: 'Habe Interesse an einem Vorab-Praktikum' oder 'Freue mich auf Rückmeldung!'" class="w-full px-4 py-3.5 bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/10 rounded-xl placeholder-white/55 text-white focus:outline-none transition-all resize-none font-sans"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full py-4 px-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-base shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                                Expressbewerbung absenden
+                            </button>
+                        </div>
+
+                        <p class="text-center text-[10px] text-brand-200 leading-relaxed font-sans">
+                            Mit dem Absenden der Bewerbung stimmst Du der Verarbeitung Deiner Daten gemäß unserer <a href="https://www.stahlspedition.de/datenschutz/" target="_blank" class="underline hover:text-white font-bold">Datenschutzerklärung</a> zu.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+            <div class="md:col-span-6 space-y-4">
+                <a href="#" class="inline-block transform hover:scale-[1.02] transition-transform duration-300" aria-label="Hergarten Gruppe Home Footer">
+                    <img src="Hergarten_Gruppe_Logo.png" alt="Hergarten Gruppe Logo Footer" class="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-80" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200'; this.classList.add('rounded')">
+                </a>
+                <p class="text-slate-400 max-w-sm font-light font-sans">
+                    Seit über 120 Jahren die zuverlässige Adresse für Logistiklösungen und erstklassige Ausbildungschancen in der europäischen Stahllogistik.
+                </p>
+            </div>
+
+            <div class="md:col-span-6 space-y-4 md:text-right text-xs sm:text-sm font-light font-sans">
+                <h4 class="font-semibold text-white uppercase tracking-wider font-spartan">Hergarten Gruppe</h4>
+                <p>
+                    Gladbacher Str. 455 | 41460 Neuss<br>
+                    Telefon: +49 (0) 2131 314022-20<br>
+                    E-Mail: karriere@hergarten-gruppe.de
+                </p>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-sans">
+            <p>&copy; 2026 Hergarten Gruppe. Alle Rechte vorbehalten.</p>
+            <div class="flex space-x-6">
+                <a href="https://www.stahlspedition.de/impressum/" class="hover:text-white transition-colors" target="_blank">Impressum</a>
+                <a href="https://www.stahlspedition.de/datenschutz/" class="hover:text-white transition-colors" target="_blank">Datenschutz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modals (Mit SVG Symbolen für garantiertes Laden) -->
+<div id="success-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" aria-hidden="true" onclick="closeModal()"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        
+        <div class="inline-block align-bottom bg-white rounded-2xl px-4 pt-5 pb-4 text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <div class="sm:flex sm:items-start">
+                <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-emerald-100 text-emerald-600 sm:mx-0 sm:h-10 sm:w-10">
+                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900" id="modal-title">Bewerbung erfolgreich gesendet!</h3>
+                    <div class="mt-2">
+                        <p class="text-slate-500 font-sans">
+                            Vielen Dank für Dein Interesse an einer Ausbildung bei uns! Wir melden uns innerhalb der nächsten 48 Stunden telefonisch, per E-Mail oder per WhatsApp bei Dir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                <button type="button" onclick="closeModal()" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-brand-500 hover:bg-brand-600 text-base font-medium text-white focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">
+                    Schließen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="error-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="error-modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" aria-hidden="true" onclick="closeErrorModal()"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        
+        <div class="inline-block align-bottom bg-white rounded-2xl px-4 pt-5 pb-4 text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <div class="sm:flex sm:items-start">
+                <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 sm:mx-0 sm:h-10 sm:w-10">
+                    <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                </div>
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900 font-spartan" id="error-modal-title">Übertragungsfehler</h3>
+                    <div class="mt-2">
+                        <p class="text-slate-500 font-sans" id="error-modal-text">
+                            Es gab ein Problem beim Absenden Deiner Expressbewerbung.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse gap-2">
+                <button type="button" onclick="closeErrorModal()" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-4 py-2 bg-slate-200 hover:bg-slate-300 text-base font-medium text-slate-700 focus:outline-none sm:w-auto sm:text-sm">
+                    Schließen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Smooth Scrolling Helper
+    function scrollToElement(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Accordion für Stellen-Details
+    function toggleJobDetails(id, btn) {
+        const details = document.getElementById(id);
+        const svgIcon = btn.querySelector('svg');
+        const textSpan = btn.querySelector('.btn-text');
+        
+        if (details.classList.contains('grid-rows-[0fr]')) {
+            details.classList.remove('grid-rows-[0fr]', 'opacity-0');
+            details.classList.add('grid-rows-[1fr]', 'opacity-100');
+            if (svgIcon) svgIcon.style.transform = 'rotate(180deg)';
+            if (textSpan) textSpan.innerText = 'Details ausblenden';
+        } else {
+            details.classList.remove('grid-rows-[1fr]', 'opacity-100');
+            details.classList.add('grid-rows-[0fr]', 'opacity-0');
+            if (svgIcon) svgIcon.style.transform = 'rotate(0deg)';
+            if (textSpan) textSpan.innerText = 'Details anzeigen';
+        }
+    }
+
+    // File input preview and restriction handling
+    function handleFileChange(input) {
+        const uploadText = document.getElementById('upload-text');
+        const uploadZone = document.getElementById('upload-zone');
+        
+        if (input.files && input.files.length > 0) {
+            let totalSizeInMB = 0;
+            let fileNames = [];
+            
+            for (let i = 0; i < input.files.length; i++) {
+                fileNames.push(input.files[i].name);
+                totalSizeInMB += input.files[i].size / 1024 / 1024;
+            }
+            
+            // Check total file size limit (10MB)
+            if (totalSizeInMB > 10) {
+                showCustomFileError("Die ausgewählten Dateien sind zusammen zu groß (maximal 10 MB insgesamt erlaubt). Bitte wähle kleinere oder weniger Dateien aus.");
+                input.value = '';
+                uploadText.innerText = "Dateien auswählen oder hierher ziehen";
+                uploadZone.classList.remove('border-emerald-400', 'bg-emerald-500/5');
+                return;
+            }
+            
+            if (input.files.length === 1) {
+                uploadText.innerText = `Ausgewählt: ${fileNames[0]} (${totalSizeInMB.toFixed(2)} MB)`;
+            } else {
+                const listStr = fileNames.length > 3 
+                    ? `${fileNames.slice(0, 3).join(', ')} und ${fileNames.length - 3} weitere` 
+                    : fileNames.join(', ');
+                uploadText.innerText = `${input.files.length} Dateien ausgewählt: ${listStr} (${totalSizeInMB.toFixed(2)} MB)`;
+            }
+            uploadZone.classList.add('border-emerald-400', 'bg-emerald-500/5');
+        } else {
+            uploadText.innerText = "Dateien auswählen oder hierher ziehen";
+            uploadZone.classList.remove('border-emerald-400', 'bg-emerald-500/5');
+        }
+    }
+
+    function showCustomFileError(message) {
+        const errorModal = document.getElementById('error-modal');
+        const errorText = document.getElementById('error-modal-text');
+        if (errorModal && errorText) {
+            errorModal.classList.remove('hidden');
+            errorText.innerHTML = message;
+        }
+    }
+
+    // Bewerbungsprozess anstoßen & Formular-Wunsch-Beruf updaten
+    function applyToJob(positionName) {
+        const formPosition = document.getElementById('form-position');
+        const applySection = document.getElementById('bewerbung-sektion');
+        
+        if (!formPosition || !applySection) return;
+
+        let matched = false;
+        for (let i = 0; i < formPosition.options.length; i++) {
+            const optVal = formPosition.options[i].value;
+            if (optVal === positionName || optVal.includes(positionName) || positionName.includes(optVal)) {
+                formPosition.selectedIndex = i;
+                matched = true;
+                break;
+            }
+        }
+        
+        if (!matched) {
+            formPosition.value = "Initiativbewerbung / Schnupperpraktikum";
+        }
+        
+        updateFormHeader(formPosition.value);
+        applySection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function updateFormHeader(position) {
+        const titleEl = document.getElementById('express-title-dynamic');
+        if (!titleEl) return;
+        
+        if (position && position !== "") {
+            titleEl.innerHTML = `Ausbildung als <br class="sm:hidden"><span class="text-emerald-300 font-extrabold">${position}</span>`;
+        } else {
+            titleEl.innerText = "Bewerben in nur 60 Sekunden!";
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('success-modal').classList.add('hidden');
+    }
+
+    function closeErrorModal() {
+        document.getElementById('error-modal').classList.add('hidden');
+    }
+
+    // Modern AJAX multipart form submission
+    async function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const form = document.getElementById('express-form');
+        const endpointInput = document.getElementById('formEndpoint');
+        const forminitUrl = endpointInput ? endpointInput.value : "https://forminit.com/f/8v0uhit2n7m";
+        
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonHtml = submitButton.innerHTML;
+        
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Wird gesendet...
+        `;
+
+        // Use FormData for text values + media file upload
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(forminitUrl, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const modal = document.getElementById('success-modal');
+                modal.classList.remove('hidden');
+                form.reset();
+                
+                // Reset file upload styles
+                const uploadText = document.getElementById('upload-text');
+                const uploadZone = document.getElementById('upload-zone');
+                if (uploadText) uploadText.innerText = "Datei auswählen oder hierher ziehen";
+                if (uploadZone) uploadZone.classList.remove('border-emerald-400', 'bg-emerald-500/5');
+                
+                updateFormHeader("");
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                throw new Error("Endpoint returned non-ok status");
+            }
+
+        } catch (error) {
+            console.error("Fehler beim Formularversand:", error);
+            
+            const errorModal = document.getElementById('error-modal');
+            const errorText = document.getElementById('error-modal-text');
+
+            errorModal.classList.remove('hidden');
+            errorText.innerHTML = `Es gab ein Problem beim Absenden Deiner Expressbewerbung. Bitte überprüfe Deine Internetverbindung oder sende uns Deine Unterlagen direkt per E-Mail an <a href="mailto:karriere@hergarten-gruppe.de" class="text-brand-500 font-bold underline">karriere@hergarten-gruppe.de</a>.`;
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonHtml;
+        }
+    }
+</script>
+</body>
+</html>
+```
